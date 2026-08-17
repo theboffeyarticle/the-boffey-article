@@ -14,14 +14,29 @@
       font-style: normal;
       font-display: swap;
     }
-    :root { --paper: #e3b58f; --shadow: rgba(59, 25, 18, 0.24); }
-    * { box-sizing: border-box; }
-    html, body { width: 100%; height: 100%; margin: 0; }
+
+    :root {
+      --paper: #e3b58f;
+      --shadow: rgba(59, 25, 18, 0.24);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+
     body {
       overflow: hidden;
       background: #9c6655;
       font-family: "Benton Sans", Impact, "Arial Black", sans-serif;
     }
+
     .hero {
       position: relative;
       width: 100%;
@@ -33,6 +48,7 @@
         url("assets/SKY_Depositphotos_43734379_ds-topaz-low%20resolution%20v2-2x-faceai%20v1%20copy.png")
         center bottom / cover no-repeat;
     }
+
     .hero::after {
       content: "";
       position: absolute;
@@ -41,6 +57,7 @@
       background: linear-gradient(180deg, rgba(60, 38, 39, 0.09), transparent 38%, rgba(117, 61, 39, 0.08));
       pointer-events: none;
     }
+
     .masthead {
       position: absolute;
       inset: clamp(1.1rem, 5.4vh, 4rem) auto auto clamp(1.25rem, 3.8vw, 4rem);
@@ -54,14 +71,22 @@
       text-shadow: 0 0 1px var(--shadow);
       user-select: none;
     }
+
     .masthead span {
       display: block;
       white-space: nowrap;
       transform: scaleX(1.43);
       transform-origin: left center;
     }
-    .masthead .line-two { margin-left: -0.01em; }
-    .masthead .line-three { margin-left: 0.02em; }
+
+    .masthead .line-two {
+      margin-left: -0.01em;
+    }
+
+    .masthead .line-three {
+      margin-left: 0.02em;
+    }
+
     .headline-logo {
       position: absolute;
       z-index: 1;
@@ -74,6 +99,7 @@
       pointer-events: none;
       user-select: none;
     }
+
     .cheerleader {
       position: absolute;
       z-index: 2;
@@ -85,6 +111,39 @@
       pointer-events: none;
       user-select: none;
     }
+
+    .site-footer {
+      position: absolute;
+      z-index: 3;
+      right: clamp(1.5rem, 3vw, 4rem);
+      bottom: clamp(1.4rem, 4vh, 3.5rem);
+      left: clamp(1.5rem, 3vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: clamp(3rem, 9vw, 12rem);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: clamp(1.4rem, 2.6vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: 0.015em;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .spotify-icon {
+      display: block;
+      width: clamp(3.5rem, 5.4vw, 6.75rem);
+      height: auto;
+    }
+
     .visually-hidden {
       position: absolute;
       width: 1px;
@@ -96,6 +155,7 @@
       white-space: nowrap;
       border: 0;
     }
+
     @media (max-aspect-ratio: 4 / 5) {
       .headline-logo {
         top: -32vh;
@@ -103,33 +163,61 @@
         width: auto;
         height: 140vh;
       }
+
       .masthead {
         top: 5vh;
         left: 5vw;
         font-size: clamp(4rem, 23vw, 9rem);
         line-height: 0.78;
       }
-      .masthead span { white-space: normal; }
+
+      .masthead span {
+        white-space: normal;
+      }
+
       .cheerleader {
         top: -5vh;
         right: -17vw;
         width: 465vw;
       }
     }
+
     @media (max-width: 520px) {
       .masthead {
         font-size: 24vw;
         letter-spacing: -0.085em;
       }
+
       .cheerleader { right: -24vw; }
+
+      .site-footer {
+        right: 1rem;
+        bottom: 1.1rem;
+        left: 1rem;
+      }
+
+      .footer-links {
+        gap: clamp(1.15rem, 7vw, 2rem);
+        font-size: clamp(.9rem, 4.5vw, 1.2rem);
+      }
+
+      .spotify-icon { width: 2.75rem; }
     }
+
     @media (prefers-reduced-motion: no-preference) {
-      .headline-logo { animation: reveal 900ms cubic-bezier(.2,.8,.2,1) both; }
-      .cheerleader { animation: float-in 1100ms 120ms cubic-bezier(.2,.8,.2,1) both; }
+      .headline-logo {
+        animation: reveal 900ms cubic-bezier(.2,.8,.2,1) both;
+      }
+
+      .cheerleader {
+        animation: float-in 1100ms 120ms cubic-bezier(.2,.8,.2,1) both;
+      }
+
       @keyframes reveal {
         from { opacity: 0; transform: translate(-50%, 1.5rem); }
         to { opacity: 1; transform: translate(-50%, 0); }
       }
+
       @keyframes float-in {
         from { opacity: 0; transform: translate(3rem, 2rem) rotate(1deg); }
         to { opacity: 1; transform: translate(0, 0) rotate(0); }
@@ -140,8 +228,31 @@
 <body>
   <main class="hero">
     <h1 class="visually-hidden">The Boffey Article</h1>
-    <img class="headline-logo" src="assets/TBA%20EOK.png?v=1" alt="" aria-hidden="true">
-    <img class="cheerleader" src="assets/CHEERLEADER_Depositphotos_43734379_ds-topaz-low%20resolution%20v2-2x-faceai%20v1%20copy.png" alt="">
+    <img
+      class="headline-logo"
+      src="assets/TBA%20EOK.png?v=1"
+      alt=""
+      aria-hidden="true"
+    >
+    <img
+      class="cheerleader"
+      src="assets/CHEERLEADER_Depositphotos_43734379_ds-topaz-low%20resolution%20v2-2x-faceai%20v1%20copy.png"
+      alt=""
+    >
+    <footer class="site-footer">
+      <nav aria-label="Primary">
+        <ul class="footer-links">
+          <li>Bio</li>
+          <li>Merch</li>
+          <li>Gigs</li>
+        </ul>
+      </nav>
+      <img
+        class="spotify-icon"
+        src="assets/spotify-white-icon.webp"
+        alt="Spotify"
+      >
+    </footer>
   </main>
 </body>
 </html>
