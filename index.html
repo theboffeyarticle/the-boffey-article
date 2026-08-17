@@ -86,6 +86,20 @@
       margin-left: 0.02em;
     }
 
+    .headline-logo {
+      position: absolute;
+      z-index: 1;
+      top: 5vh;
+      left: 3.8vw;
+      height: 90vh;
+      width: auto;
+      max-width: 82vw;
+      object-fit: contain;
+      object-position: left top;
+      pointer-events: none;
+      user-select: none;
+    }
+
     .cheerleader {
       position: absolute;
       z-index: 2;
@@ -112,6 +126,14 @@
     }
 
     @media (max-aspect-ratio: 4 / 5) {
+      .headline-logo {
+        top: 4vh;
+        left: 5vw;
+        width: 90vw;
+        height: auto;
+        max-width: none;
+      }
+
       .masthead {
         top: 5vh;
         left: 5vw;
@@ -144,7 +166,7 @@
     }
 
     @media (prefers-reduced-motion: no-preference) {
-      .masthead {
+      .headline-logo {
         animation: reveal 900ms cubic-bezier(.2,.8,.2,1) both;
       }
 
@@ -167,11 +189,12 @@
 <body>
   <main class="hero">
     <h1 class="visually-hidden">The Boffey Article</h1>
-    <div class="masthead" aria-hidden="true">
-      <span>THE</span>
-      <span class="line-two">BOFFEY</span>
-      <span class="line-three">ARTICLE</span>
-    </div>
+    <img
+      class="headline-logo"
+      src="assets/TBA%20EOK.png"
+      alt=""
+      aria-hidden="true"
+    >
     <img
       class="cheerleader"
       src="assets/CHEERLEADER_Depositphotos_43734379_ds-topaz-low%20resolution%20v2-2x-faceai%20v1%20copy.png"
