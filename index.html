@@ -108,6 +108,8 @@
       right: -45vw;
       bottom: -32vh;
       object-fit: contain;
+      transform: scale(2.5);
+      transform-origin: 65% 55%;
       filter: drop-shadow(0 1.25rem 1.6rem rgba(61, 26, 18, 0.13));
       pointer-events: none;
       user-select: none;
@@ -180,8 +182,8 @@
       }
 
       @keyframes float-in {
-        from { opacity: 0; transform: translate(3rem, 2rem) rotate(1.5deg); }
-        to { opacity: 1; transform: translate(0, 0) rotate(0); }
+        from { opacity: 0; transform: translate(3rem, 2rem) rotate(1.5deg) scale(2.5); }
+        to { opacity: 1; transform: translate(0, 0) rotate(0) scale(2.5); }
       }
     }
   </style>
