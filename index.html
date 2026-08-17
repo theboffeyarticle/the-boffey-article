@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Boffey Article</title>
+  <meta name="description" content="The official website of The Boffey Article.">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      color: #f5c4a8;
+      background:
+        radial-gradient(circle at 50% 72%, rgba(224,112,72,.65), transparent 28%),
+        linear-gradient(180deg, #563453 0%, #d66f59 52%, #1b1520 100%);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgba(8,6,10,.55));
+      pointer-events: none;
+    }
+    main {
+      position: relative;
+      z-index: 1;
+      width: min(88vw, 900px);
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 8vw, 7rem);
+      line-height: .92;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    p {
+      margin: 1.5rem 0 0;
+      font-size: clamp(.72rem, 1.3vw, .95rem);
+      font-weight: 700;
+      letter-spacing: .42em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>The Boffey Article</h1>
+    <p>Coming soon</p>
+  </main>
+</body>
+</html>
