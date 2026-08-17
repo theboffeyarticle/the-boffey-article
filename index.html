@@ -89,13 +89,13 @@
     .headline-logo {
       position: absolute;
       z-index: 1;
-      top: 5vh;
-      left: 3.8vw;
-      height: 90vh;
-      width: auto;
-      max-width: 82vw;
-      object-fit: contain;
-      object-position: left top;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      max-width: none;
+      object-fit: cover;
+      object-position: center center;
       pointer-events: none;
       user-select: none;
     }
@@ -106,9 +106,9 @@
       width: 210vw;
       height: auto;
       right: -45vw;
-      bottom: -32vh;
+      bottom: -20vh;
       object-fit: contain;
-      transform: scale(2.5);
+      transform: scale(1.7);
       transform-origin: 65% 55%;
       filter: drop-shadow(0 1.25rem 1.6rem rgba(61, 26, 18, 0.13));
       pointer-events: none;
@@ -129,11 +129,13 @@
 
     @media (max-aspect-ratio: 4 / 5) {
       .headline-logo {
-        top: 4vh;
-        left: 5vw;
-        width: 90vw;
-        height: auto;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
         max-width: none;
+        object-fit: cover;
+        object-position: center center;
       }
 
       .masthead {
@@ -148,9 +150,9 @@
       }
 
       .cheerleader {
-        width: 325vw;
-        right: -92vw;
-        bottom: -8vh;
+        width: 210vw;
+        right: -45vw;
+        bottom: -10vh;
       }
     }
 
@@ -161,9 +163,9 @@
       }
 
       .cheerleader {
-        width: 350vw;
-        right: -108vw;
-        bottom: -4vh;
+        width: 230vw;
+        right: -55vw;
+        bottom: -8vh;
       }
     }
 
@@ -182,8 +184,8 @@
       }
 
       @keyframes float-in {
-        from { opacity: 0; transform: translate(3rem, 2rem) rotate(1.5deg) scale(2.5); }
-        to { opacity: 1; transform: translate(0, 0) rotate(0) scale(2.5); }
+        from { opacity: 0; transform: translate(3rem, 2rem) rotate(1.5deg) scale(1.7); }
+        to { opacity: 1; transform: translate(0, 0) rotate(0) scale(1.7); }
       }
     }
   </style>
